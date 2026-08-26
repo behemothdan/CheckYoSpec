@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120100
 ## Title: CheckYoSpec
 ## Notes: Simple reminder to check if you are in the right talent specialization and talent loadout when a ready check is called.
 ## Author: behemothdan
