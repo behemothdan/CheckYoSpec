@@ -65,7 +65,6 @@ CheckYoSpecFrame:SetScript("OnShow", function()
 
 	-- Sets the retrieved hero icon to the frame we created
 	heroIcon:SetAtlas(currentPlayerHeroIcon)
-	secondHeroIcon.Icon:SetTexture(currentPlayerSpecIcon)
 end)
 
 -- Scaffolds the frame to be loaded with the command or when a ready check happens
