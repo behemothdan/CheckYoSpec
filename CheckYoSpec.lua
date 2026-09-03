@@ -53,12 +53,19 @@ activeHeroTalent = "No Hero Talents selected."
 currentPlayerSpec = ''
 currentPlayerSpecIcon = ''
 currentPlayerHeroIcon = ''
+currentPlayerLootSpec = ''
 
 -- When the frame is shown, execute the function to get the current talent load out and display it in the frame.
 CheckYoSpecFrame:SetScript("OnShow", function()
 	validateSpec()
 	CheckYoSpecFrame.playerTalentLoadout:SetText(talentLoadoutName)
 	CheckYoSpecFrame.talentSpec:SetText(HeroTalentTree[activeHeroTalent] .. ' - ' .. currentPlayerSpec)
+
+	if currentPlayerLootSpec == 0 then
+		CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization - " .. currentPlayerSpec)
+	else
+		CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization - " .. currentPlayerLootSpec)
+	end
 
 	-- Sets the player talent icon in the frame we created
 	talentIcon:SetTexture(currentPlayerSpecIcon)
@@ -79,6 +86,11 @@ CheckYoSpecFrame.playerName:SetFont(namefile, 28, nameflags)
 CheckYoSpecFrame.talentSpec = CheckYoSpecFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
 CheckYoSpecFrame.talentSpec:SetPoint("BOTTOM", CheckYoSpecFrame, "BOTTOM", 0, 30)
 CheckYoSpecFrame.talentSpec:SetText(activeHeroTalent .. ' ' .. currentPlayerSpec)
+
+-- Displays the current loot specialization
+CheckYoSpecFrame.lootSpec = CheckYoSpecFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+CheckYoSpecFrame.lootSpec:SetPoint("BOTTOM", CheckYoSpecFrame, "BOTTOM", 0, 10)
+CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization: " .. currentPlayerLootSpec)
 
 -- Displays the name of the player's current talent loadout
 CheckYoSpecFrame.playerTalentLoadout = CheckYoSpecFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")

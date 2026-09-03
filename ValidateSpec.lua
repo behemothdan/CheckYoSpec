@@ -25,4 +25,7 @@ function validateSpec()
 	-- The Atlas Name of the Hero Spec Icon, which functions different than a file ID
 	local heroInfo = C_Traits.GetSubTreeInfo(configID, activeHeroTalent)
 	currentPlayerHeroIcon = heroInfo.iconElementID
+
+	-- The player's currently selected loot specialization. 0 is default.
+	currentPlayerLootSpec = GetLootSpecialization()
 end
