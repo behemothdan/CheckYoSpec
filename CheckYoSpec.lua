@@ -64,7 +64,7 @@ CheckYoSpecFrame:SetScript("OnShow", function()
 	if currentPlayerLootSpec == 0 then
 		CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization - " .. currentPlayerSpec)
 	else
-		CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization - " .. currentPlayerLootSpec)
+		CheckYoSpecFrame.lootSpec:SetText("Current Loot Specialization - " .. LootSpecs[currentPlayerLootSpec])
 	end
 
 	-- Sets the player talent icon in the frame we created

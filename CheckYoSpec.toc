@@ -6,4 +6,5 @@
 
 ValidateSpec.lua
 HeroTalentTree.lua
+LootSpecTree.lua
 CheckYoSpec.lua
