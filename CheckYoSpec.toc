@@ -1,8 +1,8 @@
 ## Interface: 120100
 ## Title: CheckYoSpec
-## Notes: Simple reminder to check if you are in the right talent specialization and talent loadout when a ready check is called.
+## Notes: Simple reminder to check if you are in the right talent specialization and talent loadout when a ready check is called. Also shows you the current loot specialization.
 ## Author: behemothdan
-## Version: 1.0.1
+## Version: 1.0.2
 
 ValidateSpec.lua
 HeroTalentTree.lua
